@@ -3,6 +3,7 @@ import { Home } from "../pages/Home"
 import logo from './../logo.svg'
 import { About } from '../pages/About';
 import { Users } from "../pages/Users";
+import { ShoppingPage } from "../02-component-patterns/pages/ShoppingPage";
 
 
 export const Navigation = () => {
@@ -13,7 +14,7 @@ export const Navigation = () => {
                 <img src={logo} alt="" />
                 <ul>
                     <li>
-                        <NavLink to='/' className={({isActive})=> isActive?'nav-active':''}>Home</NavLink>
+                        <NavLink to='/' className={({isActive})=> isActive?'nav-active':''}>Shopping page</NavLink>
                     </li>
                     <li>
                         <NavLink to='/about' className={({isActive})=> isActive?'nav-active':''}>About</NavLink>
@@ -24,7 +25,7 @@ export const Navigation = () => {
                 </ul>
             </nav>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<ShoppingPage/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/users" element={<Users/>}/>
                 <Route path="/*" element={<Navigate to="/" replace/>}/>
